@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+                 http://www.springframework.org/schema/aop/spring-aop.xsd
+                      http://www.springframework.org/schema/beans
+                 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <aop:aspectj-autoproxy/>
+
+    <bean id="audience" class="concert2.Audience2"/>
+    <bean id="concert" class="concert.Concert"/>
+
+    <aop:config>
+        <aop:aspect ref="audience">
+            <aop:pointcut id="performance"
+                          expression="execution(* concert.Performance.perform(..))"/>
+
+            <aop:around method="watchPerformance"
+                        pointcut-ref="performance"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
