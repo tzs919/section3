@@ -16,10 +16,10 @@ public class ConcertConfig {
 //        return new Concert();
 //    }
 
-//    @Bean
-//    public Audience audience() { //定义Audience的bean
-//        return new Audience();
-//    }
+    @Bean
+    public Audience audience() { //定义Audience的bean
+        return new Audience();
+    }
 
 
     @Bean

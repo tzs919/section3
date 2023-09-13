@@ -6,4 +6,8 @@ public class DefaultEncoreable implements Encoreable {
         System.out.println("perform the encore!");
     }
 
+    @Override
+    public String toString() {
+        return "============DefaultEncoreable============";
+    }
 }

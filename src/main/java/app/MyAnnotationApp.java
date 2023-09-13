@@ -9,9 +9,11 @@ public class MyAnnotationApp {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(ConcertConfig.class);
 
         Performance concert = ctx.getBean("concert", Performance.class);
+        System.out.println(concert.toString() + "");
+        System.out.println(concert.getClass().getName());
         concert.perform();
 
-        Encoreable concert2 = ctx.getBean("concert", Encoreable.class);
-        concert2.performEncore();
+//        Encoreable concert2 = ctx.getBean("concert", Encoreable.class);
+//        concert2.performEncore();
     }
 }
