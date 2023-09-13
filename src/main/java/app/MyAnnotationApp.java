@@ -11,7 +11,7 @@ public class MyAnnotationApp {
         Performance concert = ctx.getBean("concert", Performance.class);
         concert.perform();
 
-        Encoreable concert2 = (Encoreable)ctx.getBean("concert", Performance.class);
+        Encoreable concert2 = ctx.getBean("concert", Encoreable.class);
         concert2.performEncore();
     }
 }
