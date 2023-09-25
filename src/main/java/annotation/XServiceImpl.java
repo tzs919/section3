@@ -1,11 +1,11 @@
 package annotation;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service("xServiceImpl")
+@Component("xServiceImpl")
 public class XServiceImpl {
 
-    @Append
+    @Append(word = "@@@@@@@@@@@@@")
     public String foo(String val) {
         return val;
     }

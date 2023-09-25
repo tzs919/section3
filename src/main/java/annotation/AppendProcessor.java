@@ -5,9 +5,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-/**
- * Append的注解处理器
- */
 @Aspect
 @Component
 public class AppendProcessor {

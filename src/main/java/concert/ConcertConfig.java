@@ -22,8 +22,8 @@ public class ConcertConfig {
     }
 
 
-    @Bean
-    public EncoreableIntroducer encoreableIntroducer() {
-        return new EncoreableIntroducer();
-    }
+//    @Bean
+//    public EncoreableIntroducer encoreableIntroducer() {
+//        return new EncoreableIntroducer();
+//    }
 }
