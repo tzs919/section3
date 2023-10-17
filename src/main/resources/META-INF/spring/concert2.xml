@@ -9,19 +9,19 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean id="audience" class="concert2.Audience"/>
     <bean id="concert" class="concert.Concert"/>
 
-    <aop:config>
-        <aop:aspect ref="audience">
-            <aop:before method="silenceCellPhones"
-                        pointcut="execution(* concert.Performance.perform(..))"/>
-            <aop:before method="takeSeats"
-                        pointcut="execution(* concert.Performance.perform(..))"/>
-            <aop:after method="applause"
-                       pointcut="execution(* concert.Performance.perform(..))"/>
-            <aop:after-throwing method="demandRefund"
-                                pointcut="execution(* concert.Performance.perform(..))"/>
-        </aop:aspect>
-    </aop:config>
+<!--    <bean id="audience" class="concert2.Audience"/>-->
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="audience">-->
+<!--            <aop:before method="silenceCellPhones"-->
+<!--                        pointcut="execution(* concert.Performance.perform(..))"/>-->
+<!--            <aop:before method="takeSeats"-->
+<!--                        pointcut="execution(* concert.Performance.perform(..))"/>-->
+<!--            <aop:after method="applause"-->
+<!--                       pointcut="execution(* concert.Performance.perform(..))"/>-->
+<!--            <aop:after-throwing method="demandRefund"-->
+<!--                                pointcut="execution(* concert.Performance.perform(..))"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
 </beans>
